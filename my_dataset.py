@@ -21,8 +21,8 @@ import numpy as np
 
 class bbbc021_dataset(Dataset):
     def __init__(self, root_dir, metadata, label_header, transform=None):
-        super(bbbc021_dataset, self).__init__()
-        self.df = pd.read_csv(os.path.join(root_dir, metadata), sep='\t')
+        super().__init__()
+        self.df = pd.read_csv(os.path.join(root_dir, metadata))
         self.root_dir = root_dir
         self.transform = transform
         self.label_header = label_header
